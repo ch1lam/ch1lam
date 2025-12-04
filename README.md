@@ -10,8 +10,6 @@
 
 ![github contribution grid snake animation](https://raw.githubusercontent.com/ch1lam/ch1lam/output/github-contribution-grid-snake.svg)
 
-![visitors](https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2Fch1lam%2Fch1lam.json&style=flat&label=visitors&color=pink)
-
 </div>
 
 
