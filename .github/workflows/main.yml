@@ -1,19 +1,17 @@
-name: generate animation
+name: Update README assets
 
 on:
-  # run automatically every 6 hours
   schedule:
-    - cron: "30 5 * * *"
+    - cron: "0 3 * * *"
 
-  # allows to manually run the job at any time
   workflow_dispatch:
 
-  # run when this workflow changes on the main branch
   push:
     branches:
       - main
     paths:
       - ".github/workflows/main.yml"
+      - "README.md"
 
 permissions:
   contents: write
@@ -28,7 +26,24 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
+      - uses: actions/checkout@v4
+
+      - name: Generate stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: "username=${{ github.repository_owner }}&count_private=true&show_icons=true&icon_color=805AD5&text_color=718096&bg_color=ffffff&hide_title=true&hide_border=true"
+          path: dist/stats.svg
+          token: ${{ secrets.GH_README_STATS_TOKEN || github.token }}
+
+      - name: Generate top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: "username=${{ github.repository_owner }}&layout=compact&langs_count=10&hide_title=true&hide_border=true&hide=HTML,CSS"
+          path: dist/top-langs.svg
+          token: ${{ secrets.GH_README_STATS_TOKEN || github.token }}
+
       - name: generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v3
         with:
@@ -36,15 +51,14 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      # publish the generated SVGs without deleting other output branch assets
-      - name: publish github-contribution-grid-snake.svg to the output branch
+
+      - name: Publish README assets to the output branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: output
           publish_dir: ./dist
           keep_files: true
-          force_orphan: true
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
-          full_commit_message: Update contribution snake
+          full_commit_message: Update README assets
