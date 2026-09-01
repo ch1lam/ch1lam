@@ -126,7 +126,7 @@
           data-testid="lang-progress"
           x="187.78"
           y="0"
-          width="34.07"
+          width="34.06"
           height="8"
           fill="#3178c6"
         />
@@ -134,9 +134,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="221.85"
+          x="221.84"
           y="0"
-          width="10.31"
+          width="10.3"
           height="8"
           fill="#b07219"
         />
@@ -144,7 +144,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="232.16"
+          x="232.14000000000001"
           y="0"
           width="14.99"
           height="8"
@@ -154,7 +154,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="237.15"
+          x="237.13000000000002"
           y="0"
           width="13.71"
           height="8"
@@ -164,7 +164,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="240.86"
+          x="240.84000000000003"
           y="0"
           width="13.53"
           height="8"
@@ -174,7 +174,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="244.39000000000001"
+          x="244.37000000000003"
           y="0"
           width="12.78"
           height="8"
@@ -184,7 +184,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="247.17000000000002"
+          x="247.15000000000003"
           y="0"
           width="11.379999999999999"
           height="8"
@@ -194,7 +194,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="248.55"
+          x="248.53000000000003"
           y="0"
           width="11"
           height="8"
@@ -204,7 +204,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="249.55"
+          x="249.53000000000003"
           y="0"
           width="10.46"
           height="8"
